@@ -7,11 +7,18 @@
   </head>
   <body>
     <h1>Student marks</h1>
+
     <p>
       Welcome to my student markbook, where I keep both students and marks... in
       a book.
     </p>
+
+    {% if logged_in == True %}
     <p>Hello, {{name}}. You visited my page at {{time}}</p>
+    {% else %}
+    <p>Please login</p>
+    {% endif %}
+
     <table border="1">
       <thead>
         <th>Firstname</th>
